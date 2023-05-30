@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using AutoMapper.Collection;
+using AutoMapper.Collection.EquivalencyExpression;
 using AutoMapper.EquivalencyExpression;
 using AutoMapper.Internal;
 using AutoMapper.Internal.Mappers;
@@ -57,7 +58,14 @@ namespace AutoMapper.Mappers
 
             foreach (var removedItem in destList.SelectMany(x => x.Value))
             {
-                destination.Remove(removedItem);
+                if(typeof(ISoftDelete).IsAssignableFrom(typeof (TDestinationItem)))
+                {
+                    ((ISoftDelete)removedItem).Delete();
+                }
+                else
+                {
+                    destination.Remove(removedItem);
+                }
             }
 
             return destination;
