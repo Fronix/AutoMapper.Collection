@@ -5,9 +5,9 @@
     <Authors>Tyler Carlson</Authors>
     <TargetFrameworks>netstandard2.1</TargetFrameworks>
     <AssemblyName>AutoMapper.Collection</AssemblyName>
-    <PackageId>AutoMapper.Collection</PackageId>
+    <PackageId>Fronix.AutoMapper.Collection.Extra</PackageId>
     <PackageIcon>icon.png</PackageIcon>
-    <PackageProjectUrl>https://github.com/AutoMapper/Automapper.Collection</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/Fronix/AutoMapper.Collection</PackageProjectUrl>
     <AssemblyOriginatorKeyFile>../Key.snk</AssemblyOriginatorKeyFile>
     <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
